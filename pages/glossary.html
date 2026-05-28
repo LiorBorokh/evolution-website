@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מושגים — אבולוציה</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner flex-between">
+      <a href="../index.html" class="nav-logo">אבולוציה<span>מדע</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">דף הבית</a></li>
+        <li><a href="games.html">משחקים</a></li>
+        <li><a href="glossary.html">מושגים</a></li>
+        <li><a href="about.html">אודות</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="פתח תפריט" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="page-hero__tag">מילון מושגים</span>
+      <h1 class="page-hero__title">מושגי <span class="text-accent">אבולוציה</span></h1>
+      <p class="page-hero__subtitle text-muted">[תיאור קצר על מילון המושגים]</p>
+      <div class="search-wrapper">
+        <input
+          type="search"
+          id="glossarySearch"
+          class="search-input"
+          placeholder="חפש מושג..."
+          autocomplete="off"
+          dir="rtl"
+        >
+        <span class="search-icon">🔍</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GLOSSARY CONTENT ===== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+
+      <!-- Filter chips -->
+      <div class="filter-chips">
+        <button class="chip active" data-filter="all">הכל</button>
+        <button class="chip" data-filter="basic">בסיסי</button>
+        <button class="chip" data-filter="genetics">גנטיקה</button>
+        <button class="chip" data-filter="fossil">מאובנים</button>
+        <button class="chip" data-filter="ecology">אקולוגיה</button>
+      </div>
+
+      <!-- Terms grid -->
+      <div class="glossary-grid" id="glossaryGrid">
+
+        <div class="glossary-term card reveal" data-term="אבולוציה" data-category="basic">
+          <div class="term-header">
+            <h3 class="term-word text-accent">אבולוציה</h3>
+            <span class="term-category-badge">בסיסי</span>
+          </div>
+          <p class="term-definition text-muted">[הגדרת המושג "אבולוציה" תופיע כאן — תהליך השינוי ההדרגתי במאפיינים של אוכלוסיות לאורך דורות]</p>
+          <div class="term-footer">
+            <span class="term-origin">מקור: לטינית — evolutio</span>
+          </div>
+        </div>
+
+        <div class="glossary-term card reveal delay-1" data-term="ברירה טבעית" data-category="basic">
+          <div class="term-header">
+            <h3 class="term-word text-accent">ברירה טבעית</h3>
+            <span class="term-category-badge">בסיסי</span>
+          </div>
+          <p class="term-definition text-muted">[הגדרת "ברירה טבעית" — מנגנון שבו אורגניזמים בעלי תכונות מועילות שורדים ומתרבים יותר]</p>
+          <div class="term-footer">
+            <span class="term-origin">טבעה על ידי: צ'ארלס דארווין, 1859</span>
+          </div>
+        </div>
+
+        <div class="glossary-term card reveal delay-2" data-term="מוטציה" data-category="genetics">
+          <div class="term-header">
+            <h3 class="term-word text-accent">מוטציה</h3>
+            <span class="term-category-badge">גנטיקה</span>
+          </div>
+          <p class="term-definition text-muted">[הגדרת "מוטציה" — שינוי בחומר הגנטי של אורגניזם, יכולה להיות תועלתית, מזיקה או נייטרלית]</p>
+          <div class="term-footer">
+            <span class="term-origin">מקור: לטינית — mutatio</span>
+          </div>
+        </div>
+
+        <div class="glossary-term card reveal" data-term="מין" data-category="basic">
+          <div class="term-header">
+            <h3 class="term-word text-accent">מין</h3>
+            <span class="term-category-badge">בסיסי</span>
+          </div>
+          <p class="term-definition text-muted">[הגדרת "מין" — קבוצת אורגניזמים שיכולים להתרבות ביניהם וליצור צאצאים פוריים]</p>
+          <div class="term-footer">
+            <span class="term-origin">מקור: לטינית — species</span>
+          </div>
+        </div>
+
+        <div class="glossary-term card reveal delay-1" data-term="הסתגלות" data-category="basic">
+          <div class="term-header">
+            <h3 class="term-word text-accent">הסתגלות</h3>
+            <span class="term-category-badge">בסיסי</span>
+          </div>
+          <p class="term-definition text-muted">[הגדרת "הסתגלות" — תכונה שפותחה לאורך זמן ומסייעת לאורגניזם לשרוד ולהתרבות בסביבתו]</p>
+          <div class="term-footer">
+            <span class="term-origin">מקור: לטינית — adaptatio</span>
+          </div>
+        </div>
+
+        <div class="glossary-term card reveal delay-2" data-term="גנוטיפ" data-category="genetics">
+          <div class="term-header">
+            <h3 class="term-word text-accent">גנוטיפ</h3>
+            <span class="term-category-badge">גנטיקה</span>
+          </div>
+          <p class="term-definition text-muted">[הגדרת "גנוטיפ" — המידע הגנטי של אורגניזם, מכלול הגנים שלו]</p>
+          <div class="term-footer">
+            <span class="term-origin">מקור: יוונית — genos + typos</span>
+          </div>
+        </div>
+
+        <div class="glossary-term card reveal" data-term="פנוטיפ" data-category="genetics">
+          <div class="term-header">
+            <h3 class="term-word text-accent">פנוטיפ</h3>
+            <span class="term-category-badge">גנטיקה</span>
+          </div>
+          <p class="term-definition text-muted">[הגדרת "פנוטיפ" — המאפיינים הנראים לעין של אורגניזם, תוצאת הגנוטיפ והסביבה]</p>
+          <div class="term-footer">
+            <span class="term-origin">מקור: יוונית — phainein + typos</span>
+          </div>
+        </div>
+
+        <div class="glossary-term card reveal delay-1" data-term="מאובן" data-category="fossil">
+          <div class="term-header">
+            <h3 class="term-word text-accent">מאובן</h3>
+            <span class="term-category-badge">מאובנים</span>
+          </div>
+          <p class="term-definition text-muted">[הגדרת "מאובן" — שרידי אורגניזם שחי בעבר, שמורים בסלעים ומהווים ראיה לאבולוציה]</p>
+          <div class="term-footer">
+            <span class="term-origin">מקור: לטינית — fossilis</span>
+          </div>
+        </div>
+
+        <div class="glossary-term card reveal delay-2" data-term="ספציאציה" data-category="ecology">
+          <div class="term-header">
+            <h3 class="term-word text-accent">ספציאציה</h3>
+            <span class="term-category-badge">אקולוגיה</span>
+          </div>
+          <p class="term-definition text-muted">[הגדרת "ספציאציה" — תהליך שבו נוצר מין חדש מאוכלוסייה קיימת, בדרך כלל עקב בידוד גאוגרפי]</p>
+          <div class="term-footer">
+            <span class="term-origin">מקור: לטינית — species + facere</span>
+          </div>
+        </div>
+
+        <div class="glossary-term card reveal" data-term="DNA" data-category="genetics">
+          <div class="term-header">
+            <h3 class="term-word text-accent">DNA</h3>
+            <span class="term-category-badge">גנטיקה</span>
+          </div>
+          <p class="term-definition text-muted">[הגדרת "DNA" — חומצת הדאוקסיריבונוקלאין, המולקולה הנושאת את המידע הגנטי בכל יצור חי]</p>
+          <div class="term-footer">
+            <span class="term-origin">גילוי: ווטסון וקריק, 1953</span>
+          </div>
+        </div>
+
+        <div class="glossary-term card reveal delay-1" data-term="כרומוזום" data-category="genetics">
+          <div class="term-header">
+            <h3 class="term-word text-accent">כרומוזום</h3>
+            <span class="term-category-badge">גנטיקה</span>
+          </div>
+          <p class="term-definition text-muted">[הגדרת "כרומוזום" — מבנה חוטי בגרעין התא, המורכב מ-DNA וחלבונים ונושא מידע גנטי]</p>
+          <div class="term-footer">
+            <span class="term-origin">מקור: יוונית — chroma + soma</span>
+          </div>
+        </div>
+
+        <div class="glossary-term card reveal delay-2" data-term="אקולוגיה" data-category="ecology">
+          <div class="term-header">
+            <h3 class="term-word text-accent">אקולוגיה</h3>
+            <span class="term-category-badge">אקולוגיה</span>
+          </div>
+          <p class="term-definition text-muted">[הגדרת "אקולוגיה" — ענף המדע העוסק ביחסים בין אורגניזמים לבין עצמם ולסביבתם]</p>
+          <div class="term-footer">
+            <span class="term-origin">מקור: יוונית — oikos + logos</span>
+          </div>
+        </div>
+
+        <div class="glossary-term card reveal" data-term="גן" data-category="genetics">
+          <div class="term-header">
+            <h3 class="term-word text-accent">גן</h3>
+            <span class="term-category-badge">גנטיקה</span>
+          </div>
+          <p class="term-definition text-muted">[הגדרת "גן" — יחידת המידע הגנטי הבסיסית, קטע DNA המכיל הוראות לייצור חלבון]</p>
+          <div class="term-footer">
+            <span class="term-origin">מקור: יוונית — genos</span>
+          </div>
+        </div>
+
+        <div class="glossary-term card reveal delay-1" data-term="הכחדה" data-category="ecology">
+          <div class="term-header">
+            <h3 class="term-word text-accent">הכחדה</h3>
+            <span class="term-category-badge">אקולוגיה</span>
+          </div>
+          <p class="term-definition text-muted">[הגדרת "הכחדה" — היעלמות מוחלטת של מין מפני כדור הארץ, כאשר אחרון פרטיו מת]</p>
+          <div class="term-footer">
+            <span class="term-origin">מקור: לטינית — extinctio</span>
+          </div>
+        </div>
+
+        <div class="glossary-term card reveal delay-2" data-term="שכבות סלע" data-category="fossil">
+          <div class="term-header">
+            <h3 class="term-word text-accent">שכבות סלע</h3>
+            <span class="term-category-badge">מאובנים</span>
+          </div>
+          <p class="term-definition text-muted">[הגדרת "שכבות סלע" (סטרטיגרפיה) — שיטת תיארוך מאובנים לפי עומקם בשכבות הגאולוגיות]</p>
+          <div class="term-footer">
+            <span class="term-origin">מקור: לטינית — stratum</span>
+          </div>
+        </div>
+
+      </div><!-- /glossary-grid -->
+
+      <!-- Empty state -->
+      <div id="glossaryEmpty" class="empty-state" style="display:none">
+        <p>🔍</p>
+        <p class="text-muted">לא נמצאו מושגים תואמים לחיפוש</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 פרויקט אבולוציה | <span class="accent">מדע ביולוגיה</span></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

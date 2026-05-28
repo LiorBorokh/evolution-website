@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>משחק זיכרון — אבולוציה</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/memory-game.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner flex-between">
+      <a href="../index.html" class="nav-logo">אבולוציה<span>מדע</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">דף הבית</a></li>
+        <li><a href="games.html">משחקים</a></li>
+        <li><a href="glossary.html">מושגים</a></li>
+        <li><a href="about.html">אודות</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="פתח תפריט" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="page-hero__tag">משחק זיכרון</span>
+      <h1 class="page-hero__title">התאם <span class="text-accent">מושג</span> להגדרה</h1>
+      <p class="page-hero__subtitle text-muted">הפוך קלפים ומצא את הזוגות התואמים</p>
+    </div>
+  </section>
+
+  <!-- ===== MODE SELECTION ===== -->
+  <section class="section" id="modeScreen" style="padding-top: 0;">
+    <div class="container">
+      <h2 class="section-title text-center">בחר מצב משחק</h2>
+      <div class="mode-options">
+
+        <button class="mode-option" id="modeBot">
+          <span class="mode-option__icon">🤖</span>
+          <span class="mode-option__title">נגד בוט</span>
+          <span class="mode-option__desc">שחק לבד מול המחשב</span>
+        </button>
+
+        <button class="mode-option" id="modeFriend">
+          <span class="mode-option__icon">👥</span>
+          <span class="mode-option__title">נגד חבר</span>
+          <span class="mode-option__desc">שחקו שניים על אותו מסך</span>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GAME SECTION (hidden until mode selected) ===== -->
+  <section class="section" id="gameSection" style="padding-top: 0; display: none;">
+    <div class="container">
+
+      <!-- Stats: player 1 | moves + turn | player 2 -->
+      <div class="memory-stats">
+        <div class="player-score" id="p1Block">
+          <span class="player-score__name" id="p1Name">שחקן 1</span>
+          <span class="player-score__value" id="score1">0</span>
+          <span class="player-score__label">זוגות</span>
+        </div>
+        <div class="memory-stat">
+          <span class="memory-stat__value" id="moveCount">0</span>
+          <span class="memory-stat__label">מהלכים</span>
+          <div class="turn-label" id="turnLabel"></div>
+        </div>
+        <div class="player-score" id="p2Block">
+          <span class="player-score__name" id="p2Name">שחקן 2</span>
+          <span class="player-score__value" id="score2">0</span>
+          <span class="player-score__label">זוגות</span>
+        </div>
+      </div>
+
+      <!-- Card grid (filled by JS) -->
+      <div id="memoryGrid" class="memory-grid"></div>
+
+      <!-- Back to mode selection -->
+      <div class="memory-reset-wrap">
+        <button id="resetBtn" class="btn btn-outline">החלף מצב</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== WIN OVERLAY ===== -->
+  <div id="winOverlay" class="win-overlay hidden">
+    <div class="card win-card">
+      <div class="win-card__emoji">🎉</div>
+      <p class="win-card__title" id="winTitle">כל הכבוד!</p>
+      <p class="win-card__moves">הסתיים ב‑<strong id="winMoves">0</strong> מהלכים</p>
+      <div class="win-card__actions">
+        <button id="winResetBtn" class="btn btn-primary">שחק שוב</button>
+        <button id="winModeBtn" class="btn btn-outline">החלף מצב</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 פרויקט אבולוציה | <span class="accent">מדע ביולוגיה</span></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/memory-game.js"></script>
+</body>
+</html>
