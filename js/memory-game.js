@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   const PAIRS = [
-    { id: 1, term: 'מושג 1', def: 'הגדרה 1' },
-    { id: 2, term: 'מושג 2', def: 'הגדרה 2' },
-    { id: 3, term: 'מושג 3', def: 'הגדרה 3' },
-    { id: 4, term: 'מושג 4', def: 'הגדרה 4' },
-    { id: 5, term: 'מושג 5', def: 'הגדרה 5' },
-    { id: 6, term: 'מושג 6', def: 'הגדרה 6' },
+    { id: 1, term: 'אבולוציה',      def: 'שינוי מינים לאורך דורות רבים' },
+    { id: 2, term: 'מוטציה',        def: 'שינוי אקראי ב-DNA' },
+    { id: 3, term: 'ברירה טבעית',   def: 'פרטים מותאמים שורדים יותר' },
+    { id: 4, term: 'התאמה',         def: 'תכונה שעוזרת לשרוד בסביבה' },
+    { id: 5, term: 'מאובן',         def: 'שרידי יצור שנשתמרו בסלע' },
+    { id: 6, term: 'תורשה',         def: 'העברת תכונות מהורים לצאצאים' },
   ];
 
   const modeScreen  = document.getElementById('modeScreen');

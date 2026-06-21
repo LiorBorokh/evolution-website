@@ -568,6 +568,15 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 700; }
 }
 .team-name { font-size: var(--fs-lg); margin-bottom: var(--space-xs); }
 .team-role { font-size: var(--fs-sm); }
+.team-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border: 2px solid var(--border);
+}
 
 .sources-list {
   display: flex;
